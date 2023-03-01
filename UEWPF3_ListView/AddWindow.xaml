@@ -1,0 +1,33 @@
+﻿<Window x:Class="UEWPF4_ListView.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UEWPF4_ListView"
+        mc:Ignorable="d"
+        Title="Dodaj użytkownika" Height="250" Width="350">
+    <Grid x:Name="gridPersonForm">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="ID:" Grid.Row="0" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="idField" Grid.Row="0" Grid.Column="1" Margin="5" Text="{Binding PersonId}" />
+        <Label Content="Imię:" Grid.Row="1" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="nameField" Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding FirstName}" />
+        <Label Content="Nazwisko:" Grid.Row="2" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="surnameField" Grid.Row="2" Grid.Column="1" Margin="5" Text="{Binding LastName}" />
+        <Label Content="Wiek:" Grid.Row="3" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="ageField" Grid.Row="3" Grid.Column="1" Margin="5" Text="{Binding Age}" />
+        <Button x:Name="dodaj" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin ="5" MinWidth="120"
+HorizontalAlignment="Center" Content="Dodaj" Click="dodaj_Click" />
+    </Grid>
+</Window>
